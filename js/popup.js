@@ -11,13 +11,13 @@ const housingTypes = {
 const map = document.querySelector('.map');
 const mapCanvas = map.querySelector('.map__canvas');
 const cardTemplate = document.querySelector('#card').content.querySelector('.popup');
-const featuresList = cardTemplate.querySelector('.popup__features'); // ul
+const featuresList = cardTemplate.querySelector('.popup__features');
 const photosList = cardTemplate.querySelector('.popup__photos');
 
 const renderFeatures = (features) => {
   const featuresFragment = document.createDocumentFragment();
   features.forEach((feature) => {
-    const featuresItem = featuresList.querySelector('.popup__feature--' + feature);
+    const featuresItem = featuresList.querySelector(`.popup__feature--${  feature}`);
     if (featuresItem) {
       featuresFragment.append(featuresItem);
     }
@@ -78,5 +78,5 @@ const renderCard = (card) => {
   mapCanvas.append(cardItem);
 };
 
-// renderCard(adsList[0]);
-adsList.forEach(renderCard);
+renderCard(adsList[0]);
+// adsList.forEach(renderCard);
