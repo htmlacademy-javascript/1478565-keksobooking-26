@@ -1,3 +1,2 @@
-import {createAdsList} from './data';
-
-createAdsList();
+import './data.js';
+import './popup.js';

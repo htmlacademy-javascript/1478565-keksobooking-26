@@ -1,4 +1,4 @@
-import {getRandomPositiveFloat, getRandomPositiveInt, getImgNumber, shuffleArray} from './util';
+import {getRandomPositiveFloat, getRandomPositiveInt, getImgNumber, shuffleArray} from './util.js';
 
 const TYPES_OF_HOUSING = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
 const TIME = ['12:00', '13:00', '14:00'];
@@ -28,10 +28,9 @@ const pricePerNight = {
 
 const descriptionOfTheRoom = 'Просторная квартира в центре города с потрясающим видом из окна.';
 
+const adsList = [];
 
 const createAdsList = () => {
-  const adsList = [];
-
   for (let i = 0; i < 10; i++) {
     adsList.push({
       author: {
@@ -56,9 +55,10 @@ const createAdsList = () => {
       }
     });
   }
-  return adsList;
 };
 
-export {createAdsList};
+createAdsList();
+
+export {adsList};
 
 
