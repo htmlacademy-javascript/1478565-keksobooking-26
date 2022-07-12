@@ -79,4 +79,5 @@ const renderCard = (card) => {
 };
 
 renderCard(adsList[0]);
-// adsList.forEach(renderCard);
+
+export {renderCard};
